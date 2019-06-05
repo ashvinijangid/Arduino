@@ -12,7 +12,8 @@ void ajax(){
         if (data.length()>0) {
                 server.send(200, "text/plain", data);
         }
-
+        
+        data = "";
 }
 
 void setup(void){
