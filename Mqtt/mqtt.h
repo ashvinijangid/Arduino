@@ -89,3 +89,22 @@ FUNCTION:
         }
 
 }
+
+
+
+
+
+void Publish(char channel_name[],int data){
+  char temp[10];
+  sprintf(temp, "%d", data);
+  client.publish(channel_name,temp);
+}
+void Publish(char channel_name[],char data[]){
+  client.publish(channel_name,data);
+}
+void Publish(char channel_name[],float data){
+  char temp[10];
+  sprintf(temp, "%f", data);
+  client.publish(channel_name,temp);
+}
+
